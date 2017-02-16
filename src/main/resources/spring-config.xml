@@ -6,5 +6,13 @@
 	<bean id="helloBean" class="com.sample.core.HelloWorld">
 		<property name="name" value="Srinivas" />
 	</bean>
-
+	
+	<bean id="car" class="com.sample.core.beanfactorypostprocessor.Car">
+		<property name="color" value="${car.color}" />
+		<property name="model" value="${car.model}" />
+	</bean>
+	<bean class="com.sample.core.beanfactorypostprocessor.MyBeanFactoryPostProcessor"/>
+	
+	<bean class="com.sample.core.beanpostprocessor.MyBeanPostProcessor"/>  
+ 
 </beans>

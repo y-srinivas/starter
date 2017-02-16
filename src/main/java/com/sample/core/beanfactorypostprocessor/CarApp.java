@@ -1,18 +1,14 @@
-package com.sample.core;
+package com.sample.core.beanfactorypostprocessor;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.sample.core.beanfactorypostprocessor.Car;
-
-public class App {
-
+public class CarApp {
+	
 	public static void main(String[] args){
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-		HelloWorld obj = (HelloWorld) context.getBean("helloBean");
-		obj.printHello();
 		Car car = (Car) context.getBean("car");
 		car.seeMyCar();
-		
 	}
+
 }
