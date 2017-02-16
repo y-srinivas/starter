@@ -11,6 +11,12 @@
 		<property name="color" value="${car.color}" />
 		<property name="model" value="${car.model}" />
 	</bean>
+	
+	<bean id="teslaCar" class="com.sample.core.beanpostprocessor.TeslaCar">
+		<property name="color" value="${car.color}" />
+		<property name="model" value="X500" />
+	</bean>
+	
 	<bean class="com.sample.core.beanfactorypostprocessor.MyBeanFactoryPostProcessor"/>
 	
 	<bean class="com.sample.core.beanpostprocessor.MyBeanPostProcessor"/>  
